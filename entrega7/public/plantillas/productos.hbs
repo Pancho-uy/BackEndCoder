@@ -1,9 +1,9 @@
 <h1 style="text-align:center">Catálogo de Productos</h1>
 <hr>
-{{#if productos}} 
-    <div class="card-group">
+{{#if productos}} {{!-- Si hay productos --}}
+    <div class="card-group"> <!-- Agrupo cards -->
         <div class="row">
-            {{#each productos}}
+            {{#each productos}} <!-- Recorro array de productos -->
                     <div class="card text-center mb-4 shadow-sm">    
                         <img style="width:30%" src={{this.foto}} class="rounded mx-auto d-block" alt="foto del producto">
                             <div class="card-body">
@@ -21,6 +21,6 @@
         </div>
     </div>
 </div>
-{{else}}
+{{else}} {{!-- Si no hay productos --}}
     <h3 class="alert alert-danger">No se encontraron productos</h3>
 {{/if}}

@@ -46,5 +46,13 @@
     "foto": "https://images-ti-vm1.tiendainglesa.com.uy/medium/P535601-7.jpg?20220922102049,Notebook-Gamer-MSI-15.6%22-Full-HD-GF63-Thin-256-Gb-SSD-8-Gb-RAM-en-Tienda-Inglesa",
     "timestamp": "13/10/2022, 08:57:45",
     "id": 6
+  },
+  {
+    "nombre": "Café",
+    "precio": "1560",
+    "descripcion": "Etíope ABOL ",
+    "foto": "https://www.abolcoffeeco.com/wp-content/uploads/2021/03/Abol-Coffee-Co-NO.2-SIDAMO.jpg",
+    "timestamp": "13/10/2022, 09:28:26",
+    "id": 7
   }
 ]
