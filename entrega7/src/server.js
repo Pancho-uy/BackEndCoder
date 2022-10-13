@@ -20,7 +20,7 @@ io.on('connection', clientSocket => {
   console.log(`Client con la ID: #${clientSocket.id} se conectó con exito`)
   io.emit('updateProd')
   clientSocket.on('updateProd', () => {
-    console.log("Se actualizo producto con exito")
+    console.log("Se actualizo producto exitosamente")
     //clientSocket.emit('updateProd')
     io.sockets.emit('updateProd')
   })
