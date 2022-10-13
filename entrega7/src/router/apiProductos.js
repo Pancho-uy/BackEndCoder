@@ -6,8 +6,8 @@ devuelvoError = (error,metodo,path) => {
     else return 'Producto no encontrado'
 }
 
-const Contenedor = require ("./Contenedor");
-a = new Contenedor("./DB/productos.txt")
+const Contenedor = require ("./Contenedor"); 
+a = new Contenedor("./DB/productos.txt") //DB de productos
 
 let administrador = false 
 

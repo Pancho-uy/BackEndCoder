@@ -1,3 +1,5 @@
+// Scripts para el frontend
+
 const socket = io.connect();
 
 let idCarrito= 0 //guardo el id del carrito

@@ -7,8 +7,8 @@ devuelvoError = (error,metodo,path) => {
 }
 
 const Contenedor = require ("./Contenedor");
-a = new Contenedor("./DB/productos.txt")
-b = new Contenedor("./DB/carrito.txt")
+a = new Contenedor("./DB/productos.txt") //DB de productos
+b = new Contenedor("./DB/carrito.txt")   //DB de carrito
 
 let administrador = false 
 
