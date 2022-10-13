@@ -10,7 +10,7 @@ socket.on('updateProd', () => { //escucho el evento updateProd
     listarProductos() 
 });
 socket.on('updateCarritoMostrar', () => {
-    console.log("cliente <-- Carrito Actualizado")
+    console.log("cliente <-- Muestro Carrito Actualizado")
     cargaCarrito(true) 
 });
 socket.on('updateCarrito', () => {

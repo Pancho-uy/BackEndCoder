@@ -68,7 +68,7 @@ class Contenedor {
   async deleteAll() {
     try {
       await fs.promises.writeFile(this.path, "");
-      console.log("Borrado total de la DB");
+      console.log("Borrado de la DB");
     } catch (error) {
       this.MuestroError(error, "deleteAll");
     }

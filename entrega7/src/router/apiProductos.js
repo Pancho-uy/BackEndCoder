@@ -76,5 +76,4 @@ routerProductos.delete('/:id',loadUser, async (req,res)=> {
         }
     }
 })
-
 module.exports={routerProductos}
