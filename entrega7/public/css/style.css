@@ -1,0 +1,44 @@
+/* Estilos para la página de inicio mios y modificacion de los de bootstrap */
+
+body {
+  background-color: #f0eaea;
+  font-family: 'Roboto', sans-serif;
+}
+
+.card {
+display: inline-block;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+max-width: 300px;
+margin: auto;
+text-align: center;
+font-family: arial;
+}
+
+.card-carrito {
+  max-width: auto;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+}
+
+.price {
+color: rgb(247, 4, 4);
+font-size: 22px;
+}
+
+.card button {
+border: 2px solid #000;
+border-radius: 5px;
+outline: 0;
+padding: 12px;
+color: rgb(226, 17, 17);
+background-color: #fff;
+text-align: center;
+cursor: pointer;
+width: 100%;
+font-size: 18px;
+}
+
+.card button:hover {
+opacity: 0.7;
+}

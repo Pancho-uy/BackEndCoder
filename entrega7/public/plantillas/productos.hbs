@@ -1,0 +1,23 @@
+<h1 style="text-align:center">Catálogo de Productos</h1>
+<hr>
+{{#if productos}} 
+<div class="card-group">
+    {{#each productos}}
+            <div class="card">    
+                <img style="width:30%" src={{this.foto}} class="rounded mx-auto d-block" alt="foto del producto">
+                    <div class="card-body">
+                        <h3 class="card-title">{{this.nombre}}</h3> 
+                        <p class="price">${{this.precio}}</p>
+                        <p class="card-text">{{this.descripcion}}</p>
+                        <p class="card-text">id: {{this.id}}</p>
+                        <p class="card-text">{{this.timestamp}}</p>
+                        <p><button onclick='agregarProdCarrito({{this.id}},false)'>Agregar a carrito</button></p>
+                        <p><button onclick='cargaActualizaProd({{this.id}},true)'>Actualizar</button></p>
+                        <p><button onclick='eliminarProd({{this.id}})'>Eliminar</button></p>
+                    </div>
+            </div>
+    {{/each}}
+</div>
+{{else}}
+    <h3 class="alert alert-danger">No se encontraron productos</h3>
+{{/if}}
