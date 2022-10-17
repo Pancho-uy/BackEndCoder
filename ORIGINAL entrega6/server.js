@@ -69,7 +69,6 @@ server.listen(PORT, () => {
   console.log("Servidor escuchando en el puerto:" + PORT);
 });
 
-
 // Conecto el socket
 io.on("connection", (socket) => {
   console.log("Usuario conectado.");
