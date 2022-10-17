@@ -2,7 +2,7 @@
 const { configMaria } = require("./conectorMariaDB");
 const knex = require("knex")(configMaria);
 console.log("Conectado a MariaDB");
-console.log(knex);
+
 class Contenedor {
     constructor(db) {
         this.db = db;

@@ -8,9 +8,8 @@ const io = new Server(server);
 const fs = require("fs");
 const clase = require('./src/Contenedor.js')
 
-<<<<<<< HEAD:ORIGINAL entrega6/server.js
 const handlebars = require("express-handlebars");
-=======
+
 //----------------------Conecto a DB----------------------//
 const { configMaria } = require("./src/conectorMariaDB");
 const { configSQLite } = require("./src/conectorSQLite");
@@ -19,7 +18,6 @@ const _knex = require('knex');
 
 const Chatdb = _knex(configSQLite);
 const Productosdb = knex(configMaria);
->>>>>>> 301e303f78d825c3d94744f60f0bc945ee6defa6:entrega8/server.js
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
