@@ -32,11 +32,8 @@ const productos = new clase(Productosdb);
 
 app.get("/", (req, res) => {
   todos=productos.getAll();
-  if (todos.length > 0) {
-    res.render("index", { layout: "index", data: productos });
-  } else {
-    res.render("index", { layout: "error"})
-  }}); 
+  res.render("index", { layout: "index", productos: todos });
+});
 
   
 /*   const contenedor = new clase();
