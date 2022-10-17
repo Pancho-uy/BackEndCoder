@@ -1,10 +1,10 @@
 [
   {
     "nombre": "Escuadra",
-    "precio": "65",
+    "precio": "70",
     "descripcion": "Escuadra de plástico",
     "foto": "https://cdn3.iconfinder.com/data/icons/education-209/64/ruler-triangle-stationary-school-512.png",
-    "timestamp": "13/10/2022, 09:05:24",
+    "timestamp": "15/10/2022, 16:52:21",
     "id": 1
   },
   {

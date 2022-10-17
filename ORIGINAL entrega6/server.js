@@ -8,7 +8,6 @@ const io = new Server(server);
 const fs = require("fs");
 const router = express.Router();
 
-
 const handlebars = require("express-handlebars");
 
 app.use(express.json());
