@@ -35,6 +35,7 @@ app.get("/", (req, res) => {
   res.render("index", { layout: "index", productos: todos });
 });
 
+  msgs=[];
   
 /*   const contenedor = new clase();
   const productos = contenedor.getAll();
