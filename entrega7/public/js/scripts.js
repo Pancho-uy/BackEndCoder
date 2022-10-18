@@ -150,9 +150,9 @@ async function cargaActualizaProd(id,mostrarActualizarProd) { //Muestra el formu
 
 async function cargaCarrito(mostrarCarrito) { //Muestra el carrito
     console.log("id carrito: " + idCarrito)
-    const prods_carrito = await buscarProdCarrito(idCarrito)
+    const productos_carrito = await buscarProdCarrito(idCarrito)
     const plantillaCarrito = await buscarPlantillaCarrito()
-    const html = armarHTMLcarrito(plantillaCarrito,prods_carrito,mostrarCarrito)
+    const html = armarHTMLcarrito(plantillaCarrito,productos_carrito,mostrarCarrito)
     document.getElementById('carrito').innerHTML = html
 }
 
@@ -194,9 +194,9 @@ function armarHTMLactualizaProd(plantillaAct,prod,mostrarActualizarProd) { // Ar
     const html = render({ prod,mostrarActualizarProd })
    return html
 }
-function armarHTMLcarrito(plantillaCarrito,prods_carrito,mostrarCarrito) { // Armo el HTML del carrito
+function armarHTMLcarrito(plantillaCarrito,productos_carrito,mostrarCarrito) { // Armo el HTML del carrito
     const render = Handlebars.compile(plantillaCarrito);
-    const html = render({ prods_carrito,mostrarCarrito })
+    const html = render({ productos_carrito,mostrarCarrito })
    return html
 }
 //--------------------------------------//

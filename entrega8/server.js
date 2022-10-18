@@ -58,7 +58,7 @@ io.on("connection", (socket) => {
 
 /*   socket.emit("msg_back", msgs);
 */
-  socket.emit("data_ready", arr); 
+  socket.emit("data_ready", arr);
 
   socket.on("data_client", (data) => {
     //msgs.push(data);
@@ -89,8 +89,7 @@ io.on("connection", (socket) => {
   socket.on("data_array", (data) => {
     arr.push(data);
     // grabo array de productos en la DB
-     knex
-      .from("productos")
+    /* knex("productos")
        .select("*")
        .del()
        .then(() => {
@@ -98,10 +97,11 @@ io.on("connection", (socket) => {
        })
        .catch((err) => {
          console.log(err);
-       });
+       }); */
      arr.map((item) => {
-     knex("productos").insert(arr)
-         .then(() => {
+     knex("productos")
+       .insert(arr)
+       .then(() => {
          console.log("Products from table added successfully!")
       });
     io.sockets.emit("data_ready", arr);

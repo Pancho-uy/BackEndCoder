@@ -7,9 +7,7 @@ const { Server } = require("socket.io");
 const io = new Server(server);
 const fs = require("fs");
 const router = express.Router();
-
-
-const handlebars = require("express-handlebars");
+const handlebars = require('express-handlebars');
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -18,15 +16,9 @@ app.use(express.static(__dirname + "/public"));
 
 /* app.use(express.static(__dirname, "js")); */
 
-app.engine(
-  "hbs",
-  handlebars({
-    layoutDirs: __dirname + "/handlebars/views/layouts",
-    extname: "hbs",
-  })
-);
-app.set("views", __dirname + "/handlebars/views");
+app.engine("hbs",handlebars({layoutDirs: __dirname + "/handlebars/views/layouts",extname: "hbs",defaultLayout: "index.hbs",}));   
 app.set("view engine", "hbs");
+app.set("views", __dirname + "/handlebars/views");
 
 app.get("/", (req, res) => {
   if (productos.length > 0) {
