@@ -79,7 +79,7 @@ io.on("connection", (socket) => {
      knex("logs")
        .insert(msgs)
        .then(() => {
-         console.log("Msgs from chat added successfully!").catch((err) => {
+         console.log("Msgs del chat agregado !").catch((err) => {
            console.log(err);
          });
        });
