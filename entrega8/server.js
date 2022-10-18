@@ -88,16 +88,6 @@ io.on("connection", (socket) => {
 
   socket.on("data_array", (data) => {
     arr.push(data);
-    // grabo array de productos en la DB
-    /* knex("productos")
-       .select("*")
-       .del()
-       .then(() => {
-         console.log("updated");
-       })
-       .catch((err) => {
-         console.log(err);
-       }); */
      arr.map((item) => {
      knex("productos")
        .insert(arr)
@@ -107,7 +97,6 @@ io.on("connection", (socket) => {
     io.sockets.emit("data_ready", arr);
   });
 });
-
   //Rutas
 });
 app.get("/", (req, res) => {
