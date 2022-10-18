@@ -15,7 +15,6 @@ const render = (data) => {
   let content = data
 
     .map((item) => {
-      // prettier-ignore
       return `<p> <strong>${item.name} at </strong> <span style="color:brown;">[${new Date().toLocaleString()}]</span> : ${item.msg} `;
     })
     .join(" ");
@@ -26,7 +25,6 @@ const render = (data) => {
 const render2 = (data) => {
   let content = data
     .map((item) => {
-      // prettier-ignore
       return `
       <tr>
         <td>${item.title}</td>

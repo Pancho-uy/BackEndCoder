@@ -1,6 +1,6 @@
 exports.up = function (knex) {
   knex.schema
-    .createTableIfNotExists("logs", (table) => {
+    .createTable("logs", (table) => {
       table.increments("id").primary();
       table.string("name", 128);
       table.string("msg");

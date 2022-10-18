@@ -7,7 +7,6 @@ const knex = require("knex")({
     password: "",
     database: "test",
   },
-
   pool: {
     min: 2,
     max: 8,

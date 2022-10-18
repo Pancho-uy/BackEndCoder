@@ -9,6 +9,7 @@ const knex = require("./src/db"); // MYSQL ( PRODUCTOS )
 const _knex = require("./knexfile"); // SQLITE 3 ( CHATS)
 
 const arr = [];
+
 /* const arr = [
   {
     title: "Escuadra",
@@ -52,21 +53,20 @@ server.listen(PORT, () => {
 });
 
 app.use(express.json());
-//////
 io.on("connection", (socket) => {
   console.log("Usuario conectado.");
 
-/*   socket.emit("msg_back", msgs);
-*/
+  socket.emit("msg_back", msgs);
+
   socket.emit("data_ready", arr);
 
   socket.on("data_client", (data) => {
-    //msgs.push(data);
+    msgs.push(data);
     //para enviarle a todos los nodos
     io.sockets.emit("msg_back", msgs);
-    //#region Code for persisting the CHAT LOGS. PLEASE READ THE MSG ATTACHED FOR USAGE.
-     knex
-       .from("logs")
+    //#rGrabo Chat en SQLITE3
+     _knex
+       .from("chatlog")
        .select("*")
        .del()
        .then(() => {
@@ -76,15 +76,14 @@ io.on("connection", (socket) => {
          console.log(err);
        });
 
-     knex("logs")
+     knex("chatlog")
        .insert(msgs)
        .then(() => {
-         console.log("Msgs del chat agregado !").catch((err) => {
+         console.log("Msgs del chat agregado a la DB !")})
+         .catch((err) => {
            console.log(err);
          });
        });
-    //#endregion
-  });
 
   socket.on("data_array", (data) => {
     arr.push(data);
@@ -92,13 +91,14 @@ io.on("connection", (socket) => {
      knex("productos")
        .insert(arr)
        .then(() => {
-         console.log("Products from table added successfully!")
+         console.log("Producto agregado.")
       });
     io.sockets.emit("data_ready", arr);
   });
 });
-  //Rutas
 });
+  //Rutas
+
 app.get("/", (req, res) => {
   res.sendFile("index.html");
 });
