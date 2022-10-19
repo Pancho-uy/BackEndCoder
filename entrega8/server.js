@@ -5,11 +5,19 @@ const server = http.createServer(app);
 const PORT = process.env.PORT || 8080;
 const { Server } = require("socket.io");
 const io = new Server(server);
-const knex = require("./src/db"); // MYSQL ( PRODUCTOS )
-const _knex = require("./knexfile"); // SQLITE 3 ( CHATS)
+//------------------------------------------------------------------------//
+//                                  DB                                    //
+//------------------------------------------------------------------------//
+const { configChat } = require("./knexfile");
+const { conectorDB } = require("./src/conectorDB");
+const _knex = require("knex")(configChat); // SQLITE 3 ( CHATS)
+const  knex = require('knex')(conectorDB); // MYSQL ( PRODUCTOS )
+//------------------------------------------------------------------------//
+/* const configChat = require("./knexfile"); */ 
 
 const arr = [];
 
+// productos de muestra
 /* const arr = [
   {
     title: "Escuadra",
@@ -43,7 +51,8 @@ const arr = [];
   },
 ];
 
- */const msgs = [];
+ */
+const msgs = [];
 
 //Basic cfg
 app.use(express.static(__dirname + "/public"));
@@ -64,25 +73,28 @@ io.on("connection", (socket) => {
     msgs.push(data);
     //para enviarle a todos los nodos
     io.sockets.emit("msg_back", msgs);
-    //#rGrabo Chat en SQLITE3
+
+    //#rGrabo Chat en SQLITE3    (ver clase 13/10 a partir de 1h45m...)
      _knex
        .from("chatlog")
        .select("*")
        .del()
+       .insert(msgs)
        .then(() => {
-         console.log("updated");
+         console.log("Chat agregado a la DB");
        })
        .catch((err) => {
          console.log(err);
        });
 
-     knex("chatlog")
-       .insert(msgs)
+    /*  _knex
+       .from("chatlog")
+
        .then(() => {
-         console.log("Msgs del chat agregado a la DB !")})
+         console.log("Msgs del  !")})
          .catch((err) => {
            console.log(err);
-         });
+         }); */
        });
 
   socket.on("data_array", (data) => {

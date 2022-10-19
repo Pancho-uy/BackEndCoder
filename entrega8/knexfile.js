@@ -1,22 +1,14 @@
-// Update with your config settings.
-const knex = require("knex");
-
-const config = {
-  development: {
-    client: "sqlite3",
+// Conecto a sqlite3
+const configChat = {
+      client: "sqlite3",
     connection: {
-      filename: "./data/chatlog.sqlite3",
+      filename: "./chatlog.sqlite3",
     },
-  },
-
   useNullAsDefault: true,
-
   pool: {
     min: 2,
     max: 8,
   },
 };
 
-const db = knex(config.development);
-
-module.exports = db;
+module.exports = {configChat};
