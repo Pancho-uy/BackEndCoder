@@ -1,8 +1,5 @@
 const socket = io();
 
-/* document.getElementById("chat").style.background =
-  "  #efe7dd url( 'https://cloud.githubusercontent.com/assets/398893/15136779/4e765036-1639-11e6-9201-67e728e86f39.jpg')";
- */
 socket.on("msg_back", (data) => {
   render(data);
 });

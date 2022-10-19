@@ -1,5 +1,5 @@
 // Conecto a sqlite3
-const configChat = {
+const conectorChat = {
       client: "sqlite3",
     connection: {
       filename: "./chatlog.sqlite3",
@@ -11,4 +11,4 @@ const configChat = {
   },
 };
 
-module.exports = {configChat};
+module.exports = {conectorChat};

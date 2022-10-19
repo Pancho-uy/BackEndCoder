@@ -8,50 +8,15 @@ const io = new Server(server);
 //------------------------------------------------------------------------//
 //                                  DB                                    //
 //------------------------------------------------------------------------//
-const { configChat } = require("./knexfile");
+const { conectorChat } = require("./src/conectorChat");
 const { conectorDB } = require("./src/conectorDB");
-const _knex = require("knex")(configChat); // SQLITE 3 ( CHATS)
-const  knex = require('knex')(conectorDB); // MYSQL ( PRODUCTOS )
+const knexChat = require("knex")(conectorChat); // SQLITE 3 ( CHATS)
+const  knexProd = require('knex')(conectorDB); // MYSQL ( PRODUCTOS )
 //------------------------------------------------------------------------//
-/* const configChat = require("./knexfile"); */ 
+/* const configChat = require("./conectorChat"); */ 
 
 const arr = [];
 
-// productos de muestra
-/* const arr = [
-  {
-    title: "Escuadra",
-    price: 100,
-    thumbnail:
-      "https://cdn3.iconfinder.com/data/icons/education-209/64/ruler-triangle-stationary-school-256.png",
-  },
-  {
-    title: "Calculadora",
-    price: 200,
-    thumbnail:
-      "https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-256.png",
-  },
-  {
-    title: "Globo Terráqueo",
-    price: 150,
-    thumbnail:
-      "https://cdn3.iconfinder.com/data/icons/education-209/64/globe-earth-geograhy-planet-school-256.png",
-  },
-  {
-    title: "Lapiz Mecanico",
-    price: 45,
-    thumbnail:
-      "https://cdn3.iconfinder.com/data/icons/education-209/64/pencil-pen-stationery-school-512.png",
-  },
-  {
-    title: "Calculadora Cientifica Casio",
-    price: 74,
-    thumbnail:
-      "https://cdn2.iconfinder.com/data/icons/logos-brands-4/24/logo_brand_brands_logos_google_keyboard-512.png",
-  },
-];
-
- */
 const msgs = [];
 
 //Basic cfg
@@ -75,7 +40,7 @@ io.on("connection", (socket) => {
     io.sockets.emit("msg_back", msgs);
 
     //#rGrabo Chat en SQLITE3    (ver clase 13/10 a partir de 1h45m...)
-     _knex
+     knexChat
        .from("chatlog")
        .select("*")
        .del()
@@ -86,21 +51,12 @@ io.on("connection", (socket) => {
        .catch((err) => {
          console.log(err);
        });
-
-    /*  _knex
-       .from("chatlog")
-
-       .then(() => {
-         console.log("Msgs del  !")})
-         .catch((err) => {
-           console.log(err);
-         }); */
        });
 
   socket.on("data_array", (data) => {
     arr.push(data);
      arr.map((item) => {
-     knex("productos")
+     knexProd("productos")
        .insert(arr)
        .then(() => {
          console.log("Producto agregado.")
