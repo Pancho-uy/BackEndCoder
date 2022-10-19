@@ -1,4 +1,4 @@
-// Creo tabla de productos si no existe
+// Creo tabla para el chat si no existe
 const { conectorChat } = require("./conectorChat");
 const knex = require("knex")(conectorChat);
 
