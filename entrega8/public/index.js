@@ -12,7 +12,7 @@ const render = (data) => {
   let content = data
 
     .map((item) => {
-      return `<p> <strong>${item.name} at </strong> <span style="color:brown;">[${new Date().toLocaleString()}]</span> : ${item.msg} `;
+      return `<p> <strong>${item.name} a las </strong> <span style="color:brown;">[${new Date().toLocaleString()}]</span><strong> dijo </strong>: ${item.msg} `;
     })
     .join(" ");
 
