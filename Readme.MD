@@ -7,7 +7,6 @@ En la carpeta **/src** estan *creoDBChat.js* y *creoDBProd.js* para crear las ta
 
 **DEPENDENCIAS:**
 - "express": "^4.18.2",
-- "express-handlebars": "^5.3.5",
 - "knex": "^0.95.15",
 - "mysql": "^2.18.1",
 - "nodemon": "^2.0.13",
