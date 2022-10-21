@@ -1,5 +1,5 @@
 // Creo DB "ecommerce"
-use ecommerce
+db.use ("ecommerce");
 // Creo colección "productos"
 db.createCollection("productos")
 // Creo colección "mensajes"
