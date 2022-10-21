@@ -1,5 +1,5 @@
 // Creo DB "ecommerce"
-db.use ("ecommerce");
+use ("ecommerce");
 // Creo colección "productos"
 db.createCollection("productos")
 // Creo colección "mensajes"
@@ -26,11 +26,15 @@ db.mensajes.insertMany([{"email":"pfranzotto0@google.fr","mensaje":"heuristic"},
 {"email":"mfreezer7@ow.ly","mensaje":"Innovative"},
 {"email":"ycasero8@google.it","mensaje":"zero tolerance"},
 {"email":"sdedden9@washington.edu","mensaje":"support"}])
+
 // Consulto todos los productos
 db.productos.find()
 // Consulto todos los mensajes
 db.mensajes.find()
+
 // Muestro cantidad de dcoumentos en colección "productos"
-db.productos.count()
+db.productos.countDocuments()
 // Muestro cantidad de dcoumentos en colección "mensajes"
-db.mensajes.count()
+db.mensajes.countDocuments()
+// inserto un producto
+db.productos.insertOne({"id":11,"title":"Mercedes","price":3899,"thumbnail":"http://dummyimage.com/143x100.png/cc0000/ffffff"})
