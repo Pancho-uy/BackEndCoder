@@ -1,0 +1,82 @@
+[{
+  "_id": {
+    "$oid": "63590ab05406f67a9df1c89a"
+  },
+  "id": 1,
+  "title": "Router",
+  "price": 3821,
+  "thumbnail": "http://dummyimage.com/246x100.png/dddddd/000000",
+  "stock": 100
+},{
+  "_id": {
+    "$oid": "63590ab05406f67a9df1c89b"
+  },
+  "id": 2,
+  "title": "Router",
+  "price": 1160,
+  "thumbnail": "http://dummyimage.com/220x100.png/dddddd/000000",
+  "stock": 100
+},{
+  "_id": {
+    "$oid": "63590ab05406f67a9df1c89c"
+  },
+  "id": 3,
+  "title": "AP 5Ghz",
+  "price": 4341,
+  "thumbnail": "http://dummyimage.com/192x100.png/5fa2dd/ffffff",
+  "stock": 100
+},{
+  "_id": {
+    "$oid": "63590ab05406f67a9df1c89e"
+  },
+  "id": 5,
+  "title": "Router",
+  "price": 2991,
+  "thumbnail": "http://dummyimage.com/122x100.png/dddddd/000000",
+  "stock": 100
+},{
+  "_id": {
+    "$oid": "63590ab05406f67a9df1c89f"
+  },
+  "id": 6,
+  "title": "Meraki",
+  "price": 4796,
+  "thumbnail": "http://dummyimage.com/247x100.png/ff4444/ffffff",
+  "stock": 100
+},{
+  "_id": {
+    "$oid": "63590ab05406f67a9df1c8a0"
+  },
+  "id": 7,
+  "title": "Router",
+  "price": 3177,
+  "thumbnail": "http://dummyimage.com/227x100.png/ff4444/ffffff",
+  "stock": 100
+},{
+  "_id": {
+    "$oid": "63590ab05406f67a9df1c8a2"
+  },
+  "id": 9,
+  "title": "AP 5Ghz",
+  "price": 3899,
+  "thumbnail": "http://dummyimage.com/143x100.png/cc0000/ffffff",
+  "stock": 100
+},{
+  "_id": {
+    "$oid": "63590ab05406f67a9df1c8a3"
+  },
+  "id": 10,
+  "title": "Switch",
+  "price": 1250,
+  "thumbnail": "http://dummyimage.com/225x100.png/cc0000/ffffff",
+  "stock": 100
+},{
+  "_id": {
+    "$oid": "63590b0b5406f67a9df1c8ae"
+  },
+  "id": 11,
+  "title": "Servidor",
+  "price": 4899,
+  "thumbnail": "http://dummyimage.com/143x100.png/cc0000/ffffff",
+  "stock": 100
+}]

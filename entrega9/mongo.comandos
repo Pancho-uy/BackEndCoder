@@ -58,12 +58,33 @@ db.productos.deleteMany({price:{$lt:1000}})
 //
 //
 //Creo usuario PEPE con contraseña asd456 solo lectura en la colección productos
+  use ('admin')
+  // Creo usuario con permisos de ADMINISTRADOR por las dudas.... :)
+  db.createUser(
+    {
+      user: 'admin',
+      pwd: 'admin',
+      roles: [
+        { role: "userAdminAnyDatabase", db: "admin" },
+        { role: "readWriteAnyDatabase", db: "admin" }
+      ]
+    }
+  )
+  // Ahora si creo el usuario PEPE
+  db.createUser(
+    {
+      user:'pepe',
+      pwd:'asd456',
+      roles:[
+        {role:'read',db:'ecommerce',collection:'productos'}
+      ]
+    })
+  // Muestro los usuarios creados
+  db.getUsers()
+  // Desde el shell nos logueamos con el usuario PEPE para probarlo
+  mongosh -u pepe -p asd456 --authenticationDatabase ecommerce
+  // Pruebas
   use ('ecommerce')
-  db.createUser({user:'pepe',pwd:'asd456',roles:[{role:'read',db:'ecommerce',collection:'productos'}]})
-
-  // Papra probar el usuario PEPE
-  use ('ecommerce')
-  db.auth("pepe", "asd456")
   // Listo productos
   db.productos.find() // Deberia de permitirme listar los productos
   // Intento insertar un producto
