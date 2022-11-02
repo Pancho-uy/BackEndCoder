@@ -10,14 +10,13 @@ const productos = db.collection("productos");
 class Producto {
   async createProduct(productBody, op) {
     if (op === "firebase") {
-      // ver el required
       if (Check(productBody) === true) {
         let doc = productos.doc(`${uuid4()}`);
         await doc.create({
-          name: productBody.name,
-          description: productBody.description,
+          nombre: productBody.name,
+          descripcion: productBody.description,
           stock: productBody.stock,
-          price: productBody.price,
+          precio: productBody.price,
         });
         return "Documento creado en Firebase!";
       } else {
@@ -34,10 +33,11 @@ class Producto {
       const info = (await productos.get()).docs;
       const response = info.map((item) => {
         return {
-          name: item.data().name,
-          description: item.data().description,
+          id: item.id,
+          nombre: item.data().nombre,
+          descripcion: item.data().descripcion,
           stock: item.data().stock,
-          price: item.data().price,
+          precio: item.data().precio,
         };
       });
       return response;

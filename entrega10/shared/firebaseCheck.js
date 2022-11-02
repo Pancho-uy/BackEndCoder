@@ -1,4 +1,4 @@
-function Check(body) {
+/* function Check(body) {
   if (!body.name || !body.description || !body.price || !body.stock) {
     return false;
   } else {
@@ -6,3 +6,4 @@ function Check(body) {
   }
 }
 module.exports = Check;
+ */
