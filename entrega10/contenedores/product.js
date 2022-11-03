@@ -20,7 +20,7 @@ class Producto {
         });
         return "Documento creado en Firebase!";
       } else {
-        return "Por favor use name, description, price y stock";
+        return "Por favor use nombre, descripcion, precio y stock";
       }
     } else {
       const product = await Product.create(productBody);

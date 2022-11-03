@@ -1,7 +1,7 @@
 const { Schema, model } = require("mongoose");
 const carritoSchema = new Schema({
   timestamp: {
-    type: Number, // si lo pongo como date no se respeta el timestamp
+    type: Number, // si uso  DATE no respeta el timestamp
     required: true,
   },
   productos: {

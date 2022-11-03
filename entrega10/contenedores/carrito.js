@@ -15,7 +15,7 @@ class Carrito {
       let doc = carritos.doc(`${uuid4()}`);
       await doc.create({
         timestamp: +Date.now(),
-        productos: "", // aca seria [{}]
+        productos: [{}],
       });
       return "Carrito creado en Firebase!";
     } else {
@@ -47,7 +47,7 @@ class Carrito {
       if (!request) {
         return "Carrito no encontrado";
       }
-      return "el carrito fue eliminado!";
+      return "El carrito fue eliminado!";
     } else {
       const carrito = await Cart.findById(id);
       if (!carrito) {
@@ -81,7 +81,7 @@ class Carrito {
       }
       await carritos.doc(id).update(data);
 
-      return "Su carrito fue actualizado con exito!";
+      return "Su carrito fue actualizado con exito";
     } else {
       const carrito = await Cart.findById(id);
       if (!carrito) {
