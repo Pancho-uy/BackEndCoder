@@ -1,0 +1,108 @@
+{
+  "entities": {
+    "chat": {
+      "contenido": {
+        "0": {
+          "author": {
+            "id": "pancho@cilbeti.com.uy",
+            "name": "gbf",
+            "lastname": "bv",
+            "age": "4",
+            "nickname": "b",
+            "avatar": "re"
+          },
+          "messages": {
+            "msg": "asd",
+            "id": "pancho@cilbeti.com.uy"
+          }
+        },
+        "1": {
+          "author": {
+            "id": "pancho@cilbeti.com.uy",
+            "name": "gbf",
+            "lastname": "bv",
+            "age": "4",
+            "nickname": "b",
+            "avatar": "re"
+          },
+          "messages": {
+            "msg": "asdasd",
+            "id": "pancho@cilbeti.com.uy"
+          }
+        },
+        "2": {
+          "author": {
+            "id": "pancho.uy@gmail.com",
+            "name": "Francisco",
+            "lastname": "Cilbeti",
+            "age": "51",
+            "nickname": "Pancho",
+            "avatar": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png"
+          },
+          "messages": {
+            "msg": "holaaaaaa",
+            "id": "pancho.uy@gmail.com"
+          }
+        },
+        "3": {
+          "author": {
+            "id": "pancho.uy@gmail.com",
+            "name": "",
+            "lastname": "",
+            "age": "",
+            "nickname": "",
+            "avatar": ""
+          },
+          "messages": {
+            "msg": "pprruueebbaa",
+            "id": "pancho.uy@gmail.com"
+          }
+        },
+        "4": {
+          "author": {
+            "id": "pancho.uy@gmail.com",
+            "name": "",
+            "lastname": "",
+            "age": "",
+            "nickname": "",
+            "avatar": ""
+          },
+          "messages": {
+            "msg": "oooo",
+            "id": "pancho.uy@gmail.com"
+          }
+        },
+        "5": {
+          "author": {
+            "id": "pancho.uy@gmail.com",
+            "name": "Francisco",
+            "lastname": "Cilbeti",
+            "age": "51",
+            "nickname": "Pancho",
+            "avatar": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png"
+          },
+          "messages": {
+            "msg": "prueba 99999",
+            "id": "pancho.uy@gmail.com"
+          }
+        },
+        "6": {
+          "author": {
+            "id": "",
+            "name": "",
+            "lastname": "",
+            "age": "",
+            "nickname": "",
+            "avatar": ""
+          },
+          "messages": {
+            "msg": "",
+            "id": ""
+          }
+        },
+        "id": "contenido"
+      }
+    }
+  },
+  "result": "contenido"
+}
