@@ -49,8 +49,13 @@ app.use(express.urlencoded({extended:true}));
 app.use('/api/carrito', cartRouter); */
 app.use('/api/usuario', userRouter);
 
+app.get('/', (req, res) => {
+    res.redirect('/api/usuario/login');
+})
+
+
 const server = app.listen(PORT, () => {
     console.log(` Servidor escuchando en: http://localhost:${PORT}`)
     })
-    
+
 server.on('error', (err) => console.log(err));
