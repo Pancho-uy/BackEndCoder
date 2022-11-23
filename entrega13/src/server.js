@@ -20,6 +20,8 @@ import GithubStrategy from 'passport-github2';
 // y me funciono, no la mejor forma de hacerlo ya lo sé....                                                              //
 
 /* const passport = require('passport'); */
+//
+// Lo mismo que en el caso anterior, no me funcionaba el import de users, asi que lo puse acá y me funciono, no la mejor forma de hacerlo ya lo sé.... //
 const users = [ { id: 1, username: 'Pancho-uy', password: 'admin', admin:true } ]
 /* const { users } = require('../usuarios/users'); */
 
@@ -36,6 +38,7 @@ function isValidPassword(user, password) {
     return bCrypt.compareSync(password, user.password);
    }
  */
+//--------------------------------------------------------------------------------------------------------------------//
 const initPassport = () => {
     passport.use('github', new GithubStrategy({
         clientID: process.env.GITHUB_CLIENT_ID,
@@ -54,12 +57,11 @@ const initPassport = () => {
             return done(null, user);
         })
     )
-    // nos guarda el id del usuario en la session
     passport.serializeUser((user, done) => { 
         done(null, user.id);
     })
 
-    passport.deserializeUser((id, done) => { // toma el id que esta en las sessiones 
+    passport.deserializeUser((id, done) => {
         console.log(users)
         let user = users.find(user => user.id === id)
         done(null, user)
@@ -128,7 +130,6 @@ app.use(express.urlencoded({extended:true}));
 app.use('/api/productos', productRouter);
 app.use('/api/carrito', cartRouter);
 app.use('/api/usuario', userRouter);
-
 
 /* ---------------------- Login con GITHUB  -------------------------------- */
 
