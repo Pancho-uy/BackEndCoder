@@ -1,24 +1,10 @@
 import { users } from '../../usuarios/users';
 const passport = require('passport');
-/* const { users } = require('../usuarios/users'); */
 const bCrypt = require('bcrypt');
 
 const GithubStrategy = require('passport-github2').Strategy;
 
-/* console.log(users)
-
-function createHash(password) {
-    return bCrypt.hashSync(
-              password,
-              bCrypt.genSaltSync(10),
-              null);
-  }
-
-function isValidPassword(user, password) {
-    return bCrypt.compareSync(password, user.password);
-   }
- */
-export default initPassport = () => {
+initPassport = () => {
     passport.use('github', new GithubStrategy({
         clientID: process.env.GITHUB_CLIENT_ID,
         clientSecret: process.env.GITHUB_CLIENT_SECRET,
@@ -38,12 +24,12 @@ export default initPassport = () => {
             return done(null, user);
         })
     )
-    // nos guarda el id del usuario en la session
+    
     passport.serializeUser((user, done) => { 
         done(null, user.id);
     })
 
-    passport.deserializeUser((id, done) => { // toma el id que esta en las sessiones 
+    passport.deserializeUser((id, done) => { 
         console.log(users)
         let user = users.find(user => user.id === id)
         done(null, user)
@@ -51,4 +37,4 @@ export default initPassport = () => {
 
 }
 
-/* module.exports = initPassport; */
+module.exports = initPassport;
