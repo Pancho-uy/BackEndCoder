@@ -5,6 +5,8 @@ import { ProductoDao } from "../dao/ProductoDao.js";
 const router = express.Router();
 const carritoDao = new CarritoDao();
 
+//Endpoints
+
 // POST /api/carrito
 router.post('/', async (_req, res) => {
     const newCart = await carritoDao.createCart();
