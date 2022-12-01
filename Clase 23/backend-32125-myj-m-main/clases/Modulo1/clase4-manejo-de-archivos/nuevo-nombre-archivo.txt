@@ -1,4 +1,0 @@
-{
-    nombre: "Juan",
-    apellido: "Perez"
-}

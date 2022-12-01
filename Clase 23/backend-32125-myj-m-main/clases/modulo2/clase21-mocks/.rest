@@ -1,2 +1,0 @@
-POST http://localhost:8080/api/usuarios/popular HTTP/1.1
-
