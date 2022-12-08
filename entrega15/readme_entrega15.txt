@@ -33,3 +33,5 @@ http {
     }
 
 }
+
+para ejecutarlo http://localhost:8080/info/
