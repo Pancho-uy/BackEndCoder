@@ -76,11 +76,10 @@ app._router.stack.forEach(function (r) {
     }
   });
 
-const { PORT } = minimist(process.argv.slice(2), options);
+  const { PORT } = minimist(process.argv.slice(2), options);
 
-const server = app.listen(PORT, () => {
-    logger.info(`🚀 Server started at http://localhost:${PORT}`)
-    })
-    
+  const server = app.listen(PORT, () => {
+      console.log(` Seridor escuchando en http://localhost:${PORT} - PID WORKER ${process.pid}`);
+      })
+
 server.on('error', (err) => logger.error(err));
-
