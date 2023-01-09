@@ -1,4 +1,4 @@
-import express from "express";
+import express, { application } from "express";
 const router = express.Router();
 import {UsuarioDao} from '../dao/UsuarioDao.js';
 import { sendemail } from "../notifications/gmail/EmailSender.js";
@@ -26,19 +26,18 @@ router.get('/signup', (req, res) => {
 router.post('/signup', async(req,res) => {
     const { body } = req;
     const newUser = await userDao.createUser(body);
-    
+
     if (newUser) {
         const now = new Date();
         const newUserTemplateEmail = htmlNewUserTemplate(newUser._id, now.toLocaleString(), newUser.username);
-        await sendemail('Nuevo usuario creado', newUserTemplateEmail);
-        await WS_sender('Nuevo usuario creado', newUser._id, now.toLocaleString(), newUser.username);
-        res.status(200).json({"exito": "Usuario "+newUser.username+" agregado con el ID " + newUser._id})
+        await sendemail('Nuevo registro', newUserTemplateEmail);
+        await WS_sender('Nuevo registro', newUser._id, now.toLocaleString(), newUser.username);
+        /* res.status(200).json({"exito": "Usuario "+newUser.username+" agregado con el ID " + newUser._id}) */
+
     } else {
         res.status(400).json({"error": "there was an error, please verify the body content match the schema"})
     }
-    
 })
-
 
 router.post('/login', async(req, res) => {
     const {user, pass} = req.body;

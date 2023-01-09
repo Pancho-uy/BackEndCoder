@@ -1,6 +1,6 @@
 import express from "express";
 import productRouter from './routes/product.js';
-import cartRouter from './routes/cart.js';
+import cartRouter from './routes/cart.js'; 
 import userRouter from './routes/user.js';
 import otherRouter from './routes/other.js';
 import session from 'express-session';
@@ -12,6 +12,10 @@ import compression from 'compression';
 import minimist from 'minimist';
 import logger from "./loggers/Log4jsLogger.js";
 import loggerMiddleware from "./middlewares/routesLogger.middleware.js";
+import multer from 'multer';
+
+
+
 const app = express();
 
 const __filename = fileURLToPath(import.meta.url);
@@ -53,6 +57,29 @@ app.use('/api/productos', productRouter);
 app.use('/api/carrito', cartRouter);
 app.use('/api/usuario', userRouter);
 app.use('/test', otherRouter);
+
+
+let storage = multer.diskStorage({
+    destination: function (req, file, cb) {
+        cb(null, 'uploads')
+    },
+    filename: function (req, file, cb) {
+        // console.log(file)
+        cb(null, file.originalname + '-' + Date.now())    
+    }
+})
+
+let upload = multer({ storage: storage })
+
+app.post('/uploadfile', upload.single('myfile'), (req, res, next) => {
+    const file = req.file
+    if (!file) {
+        const error = new Error('¡Suba una archivo!')
+        error.httpStatusCode = 400
+        return next(error)
+    }
+    res.send(file)
+})
 
 
 app.all("*", (req, res) => {

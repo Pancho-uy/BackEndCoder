@@ -9,11 +9,10 @@ const carritoDao = new CarritoDao();
 // POST /api/carrito
 router.post('/', async (_req, res) => {
     const newCart = await carritoDao.createCart();
-    
     newCart
         ? res.status(200).json({"success": "Product added with ID " + newCart._id})
         : res.status(500).json({"error": "there was an error"})
-    
+
 })
 
 // DELETE /api/carrito/id
@@ -28,7 +27,6 @@ router.delete('/:id', async(req,res) => {
 })
 
 // POST /api/carrito/:id/productos
-
 router.post('/:id/productos', async(req,res) => {
     const { id } = req.params;
     const { body } = req;

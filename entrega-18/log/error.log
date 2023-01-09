@@ -243,3 +243,37 @@
   keyValue: { username: 'pancho3' },
   [Symbol(errorLabels)]: Set(0) {}
 }
+[2023-01-09T11:41:56.252] [ERROR] default - MongoServerError: E11000 duplicate key error collection: test.usuarios index: username_1 dup key: { username: "pancho2127" }
+    at C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\mongoose\node_modules\mongodb\lib\operations\insert.js:53:33
+    at C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\mongoose\node_modules\mongodb\lib\cmap\connection_pool.js:273:25
+    at handleOperationResult (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\mongoose\node_modules\mongodb\lib\sdam\server.js:327:20)
+    at Connection.onMessage (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\mongoose\node_modules\mongodb\lib\cmap\connection.js:215:9)
+    at MessageStream.<anonymous> (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\mongoose\node_modules\mongodb\lib\cmap\connection.js:63:60)
+    at MessageStream.emit (node:events:527:28)
+    at processIncomingData (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\mongoose\node_modules\mongodb\lib\cmap\message_stream.js:108:16)
+    at MessageStream._write (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\mongoose\node_modules\mongodb\lib\cmap\message_stream.js:28:9)
+    at writeOrBuffer (node:internal/streams/writable:390:12)
+    at _write (node:internal/streams/writable:331:10) {
+  index: 0,
+  code: 11000,
+  keyPattern: { username: 1 },
+  keyValue: { username: 'pancho2127' },
+  [Symbol(errorLabels)]: Set(0) {}
+}
+[2023-01-09T11:44:04.532] [ERROR] default - MongoServerError: E11000 duplicate key error collection: test.usuarios index: username_1 dup key: { username: "pancho2127" }
+    at C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\mongoose\node_modules\mongodb\lib\operations\insert.js:53:33
+    at C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\mongoose\node_modules\mongodb\lib\cmap\connection_pool.js:273:25
+    at handleOperationResult (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\mongoose\node_modules\mongodb\lib\sdam\server.js:327:20)
+    at Connection.onMessage (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\mongoose\node_modules\mongodb\lib\cmap\connection.js:215:9)
+    at MessageStream.<anonymous> (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\mongoose\node_modules\mongodb\lib\cmap\connection.js:63:60)
+    at MessageStream.emit (node:events:527:28)
+    at processIncomingData (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\mongoose\node_modules\mongodb\lib\cmap\message_stream.js:108:16)
+    at MessageStream._write (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\mongoose\node_modules\mongodb\lib\cmap\message_stream.js:28:9)
+    at writeOrBuffer (node:internal/streams/writable:390:12)
+    at _write (node:internal/streams/writable:331:10) {
+  index: 0,
+  code: 11000,
+  keyPattern: { username: 1 },
+  keyValue: { username: 'pancho2127' },
+  [Symbol(errorLabels)]: Set(0) {}
+}
