@@ -58,4 +58,4 @@ Schema.methods.comparePassword = async function(password) {
     return valid;
 }
 
-export const UsuariosModel = mongoose.model("usuarios", Schema);
+export const UsuariosModel = mongoose.model("ecommerce.usuarios", Schema);

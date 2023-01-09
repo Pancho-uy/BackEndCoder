@@ -175,3 +175,71 @@
   keyValue: { username: 'pancho' },
   [Symbol(errorLabels)]: Set(0) {}
 }
+[2023-01-08T22:44:54.497] [ERROR] default - Error: listen EADDRINUSE: address already in use :::8080
+    at Server.setupListenHandle [as _listen2] (node:net:1380:16)
+    at listenInCluster (node:net:1428:12)
+    at Server.listen (node:net:1516:7)
+    at Function.listen (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\express\lib\application.js:618:24)
+    at file:///C:/Users/Pancho/Downloads/Full%20Stack%20Dev/BackendCoder/BackEndCoder/entrega-18/src/server.js:81:20
+    at ModuleJob.run (node:internal/modules/esm/module_job:198:25)
+    at async Promise.all (index 0)
+    at async ESMLoader.import (node:internal/modules/esm/loader:409:24)
+    at async loadESM (node:internal/process/esm_loader:85:5)
+    at async handleMainPromise (node:internal/modules/run_main:61:12) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::',
+  port: 8080
+}
+[2023-01-08T22:55:47.378] [ERROR] default - MongoServerError: E11000 duplicate key error collection: test.usuarios index: username_1 dup key: { username: "pancho399999" }
+    at C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\mongoose\node_modules\mongodb\lib\operations\insert.js:53:33
+    at C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\mongoose\node_modules\mongodb\lib\cmap\connection_pool.js:273:25
+    at handleOperationResult (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\mongoose\node_modules\mongodb\lib\sdam\server.js:327:20)
+    at Connection.onMessage (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\mongoose\node_modules\mongodb\lib\cmap\connection.js:215:9)
+    at MessageStream.<anonymous> (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\mongoose\node_modules\mongodb\lib\cmap\connection.js:63:60)
+    at MessageStream.emit (node:events:527:28)
+    at processIncomingData (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\mongoose\node_modules\mongodb\lib\cmap\message_stream.js:108:16)
+    at MessageStream._write (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\mongoose\node_modules\mongodb\lib\cmap\message_stream.js:28:9)
+    at writeOrBuffer (node:internal/streams/writable:390:12)
+    at _write (node:internal/streams/writable:331:10) {
+  index: 0,
+  code: 11000,
+  keyPattern: { username: 1 },
+  keyValue: { username: 'pancho399999' },
+  [Symbol(errorLabels)]: Set(0) {}
+}
+[2023-01-08T23:01:15.950] [ERROR] default - MongoServerError: E11000 duplicate key error collection: test.usuarios index: username_1 dup key: { username: "pancho39999" }
+    at C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\mongoose\node_modules\mongodb\lib\operations\insert.js:53:33
+    at C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\mongoose\node_modules\mongodb\lib\cmap\connection_pool.js:273:25
+    at handleOperationResult (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\mongoose\node_modules\mongodb\lib\sdam\server.js:327:20)
+    at Connection.onMessage (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\mongoose\node_modules\mongodb\lib\cmap\connection.js:215:9)
+    at MessageStream.<anonymous> (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\mongoose\node_modules\mongodb\lib\cmap\connection.js:63:60)
+    at MessageStream.emit (node:events:527:28)
+    at processIncomingData (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\mongoose\node_modules\mongodb\lib\cmap\message_stream.js:108:16)
+    at MessageStream._write (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\mongoose\node_modules\mongodb\lib\cmap\message_stream.js:28:9)
+    at writeOrBuffer (node:internal/streams/writable:390:12)
+    at _write (node:internal/streams/writable:331:10) {
+  index: 0,
+  code: 11000,
+  keyPattern: { username: 1 },
+  keyValue: { username: 'pancho39999' },
+  [Symbol(errorLabels)]: Set(0) {}
+}
+[2023-01-08T23:32:08.881] [ERROR] default - MongoServerError: E11000 duplicate key error collection: test.usuarios index: username_1 dup key: { username: "pancho3" }
+    at C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\mongoose\node_modules\mongodb\lib\operations\insert.js:53:33
+    at C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\mongoose\node_modules\mongodb\lib\cmap\connection_pool.js:273:25
+    at handleOperationResult (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\mongoose\node_modules\mongodb\lib\sdam\server.js:327:20)
+    at Connection.onMessage (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\mongoose\node_modules\mongodb\lib\cmap\connection.js:215:9)
+    at MessageStream.<anonymous> (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\mongoose\node_modules\mongodb\lib\cmap\connection.js:63:60)
+    at MessageStream.emit (node:events:527:28)
+    at processIncomingData (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\mongoose\node_modules\mongodb\lib\cmap\message_stream.js:108:16)
+    at MessageStream._write (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\mongoose\node_modules\mongodb\lib\cmap\message_stream.js:28:9)
+    at writeOrBuffer (node:internal/streams/writable:390:12)
+    at _write (node:internal/streams/writable:331:10) {
+  index: 0,
+  code: 11000,
+  keyPattern: { username: 1 },
+  keyValue: { username: 'pancho3' },
+  [Symbol(errorLabels)]: Set(0) {}
+}

@@ -81,6 +81,5 @@ const { PORT } = minimist(process.argv.slice(2), options);
 const server = app.listen(PORT, () => {
     logger.info(`Servidor escuchando en http://localhost:${PORT}`)
     })
-    
 server.on('error', (err) => logger.error(err));
 
