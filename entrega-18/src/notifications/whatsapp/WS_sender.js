@@ -9,7 +9,13 @@ console.log(accountSid, authToken);
 const cliente = twilio(accountSid, authToken);
 
 export async function WS_sender(_message, _id, _date, _username, _movil , _email) {
-        let bodymesage = `*Nuevo usuario creado* \n*ID:* _${_id}_ \n*Fecha:* _${_date}_\n*Username:* _${_username}_\n*Celular:* _${_movil}_\n*Email:* _${_email}_\n`;
+        let bodymesage = `*Nuevo usuario creado* 
+        \n*ID:* _${_id}_ 
+        \n*Fecha:* _${_date}_
+        \n*Username:* _${_username}_
+        \n*Celular:* _${_movil}_
+        \n*Email:*_${_email}_
+        \n`;
         try {
             const options = {
                 body: bodymesage,
