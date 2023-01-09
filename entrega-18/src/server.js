@@ -1,7 +1,7 @@
 import express from "express";
 import productRouter from './routes/product.js';
 import cartRouter from './routes/cart.js';
-import userRouter from './routes/user_viejo.js';
+import userRouter from './routes/user.js';
 import otherRouter from './routes/other.js';
 import session from 'express-session';
 import {engine} from 'express-handlebars';
@@ -43,6 +43,7 @@ app.use(
         resave: true,
         saveUninitialized: true,
         cookie: {maxAge: 600000} //10 min.
+        
 }))
 
 app.use(express.json());
@@ -53,12 +54,12 @@ app.use('/api/carrito', cartRouter);
 app.use('/api/usuario', userRouter);
 app.use('/test', otherRouter);
 
+
 app.all("*", (req, res) => {
     res.status(404).json({"error": "ruta no existente"})
   });
 
-/* --------------- Leer el puerto por consola o usar 8080 -------------- */
-/*                                                                       */
+/* --------------- Leer el puerto por consola o setear default -------------- */
 
 const options = {
     alias: {
@@ -75,10 +76,11 @@ app._router.stack.forEach(function (r) {
     }
   });
 
-  const { PORT } = minimist(process.argv.slice(2), options);
+const { PORT } = minimist(process.argv.slice(2), options);
 
-  const server = app.listen(PORT, () => {
-      console.log(` Seridor escuchando en http://localhost:${PORT} - PID WORKER ${process.pid}`);
-      })
-
+const server = app.listen(PORT, () => {
+    logger.info(`Servidor escuchando en http://localhost:${PORT}`)
+    })
+    
 server.on('error', (err) => logger.error(err));
+

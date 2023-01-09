@@ -1,0 +1,160 @@
+[2023-01-08T16:33:04.569] [ERROR] default - ReferenceError: Cannot access 'mailOptions' before initialization
+    at sendemail (file:///C:/Users/Pancho/Downloads/Full%20Stack%20Dev/BackendCoder/BackEndCoder/entrega-18/src/notifications/gmail/EmailSender.js:38:29)
+    at file:///C:/Users/Pancho/Downloads/Full%20Stack%20Dev/BackendCoder/BackEndCoder/entrega-18/src/routes/user.js:32:15
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2023-01-08T16:34:21.963] [ERROR] default - ReferenceError: MAIL_ACCOUNT is not defined
+    at mailOptions (file:///C:/Users/Pancho/Downloads/Full%20Stack%20Dev/BackendCoder/BackEndCoder/entrega-18/src/notifications/gmail/EmailSender.js:19:13)
+    at sendemail (file:///C:/Users/Pancho/Downloads/Full%20Stack%20Dev/BackendCoder/BackEndCoder/entrega-18/src/notifications/gmail/EmailSender.js:38:25)
+    at file:///C:/Users/Pancho/Downloads/Full%20Stack%20Dev/BackendCoder/BackEndCoder/entrega-18/src/routes/user.js:32:15
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2023-01-08T16:34:52.306] [ERROR] default - ReferenceError: MAIL_ACCOUNT is not defined
+    at mailOptions (file:///C:/Users/Pancho/Downloads/Full%20Stack%20Dev/BackendCoder/BackEndCoder/entrega-18/src/notifications/gmail/EmailSender.js:19:13)
+    at sendemail (file:///C:/Users/Pancho/Downloads/Full%20Stack%20Dev/BackendCoder/BackEndCoder/entrega-18/src/notifications/gmail/EmailSender.js:38:25)
+    at file:///C:/Users/Pancho/Downloads/Full%20Stack%20Dev/BackendCoder/BackEndCoder/entrega-18/src/routes/user.js:32:15
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2023-01-08T16:35:23.679] [ERROR] default - ReferenceError: MAIL_ACCOUNT is not defined
+    at mailOptions (file:///C:/Users/Pancho/Downloads/Full%20Stack%20Dev/BackendCoder/BackEndCoder/entrega-18/src/notifications/gmail/EmailSender.js:19:13)
+    at sendemail (file:///C:/Users/Pancho/Downloads/Full%20Stack%20Dev/BackendCoder/BackEndCoder/entrega-18/src/notifications/gmail/EmailSender.js:38:25)
+    at file:///C:/Users/Pancho/Downloads/Full%20Stack%20Dev/BackendCoder/BackEndCoder/entrega-18/src/routes/user.js:32:15
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2023-01-08T16:36:25.822] [ERROR] default - ReferenceError: MAIL_ACCOUNT is not defined
+    at mailOptions (file:///C:/Users/Pancho/Downloads/Full%20Stack%20Dev/BackendCoder/BackEndCoder/entrega-18/src/notifications/gmail/EmailSender.js:19:13)
+    at sendemail (file:///C:/Users/Pancho/Downloads/Full%20Stack%20Dev/BackendCoder/BackEndCoder/entrega-18/src/notifications/gmail/EmailSender.js:38:25)
+    at file:///C:/Users/Pancho/Downloads/Full%20Stack%20Dev/BackendCoder/BackEndCoder/entrega-18/src/routes/user.js:32:15
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2023-01-08T16:36:54.791] [ERROR] default - TypeError: transporter.sendeMail is not a function
+    at sendemail (file:///C:/Users/Pancho/Downloads/Full%20Stack%20Dev/BackendCoder/BackEndCoder/entrega-18/src/notifications/gmail/EmailSender.js:43:27)
+    at file:///C:/Users/Pancho/Downloads/Full%20Stack%20Dev/BackendCoder/BackEndCoder/entrega-18/src/routes/user.js:32:15
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2023-01-08T16:38:18.861] [ERROR] default - MongoServerError: E11000 duplicate key error collection: test.usuarios index: username_1 dup key: { username: "pancho91" }
+    at C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\mongoose\node_modules\mongodb\lib\operations\insert.js:53:33
+    at C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\mongoose\node_modules\mongodb\lib\cmap\connection_pool.js:273:25
+    at handleOperationResult (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\mongoose\node_modules\mongodb\lib\sdam\server.js:327:20)
+    at Connection.onMessage (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\mongoose\node_modules\mongodb\lib\cmap\connection.js:215:9)
+    at MessageStream.<anonymous> (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\mongoose\node_modules\mongodb\lib\cmap\connection.js:63:60)
+    at MessageStream.emit (node:events:527:28)
+    at processIncomingData (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\mongoose\node_modules\mongodb\lib\cmap\message_stream.js:108:16)
+    at MessageStream._write (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\mongoose\node_modules\mongodb\lib\cmap\message_stream.js:28:9)
+    at writeOrBuffer (node:internal/streams/writable:390:12)
+    at _write (node:internal/streams/writable:331:10) {
+  index: 0,
+  code: 11000,
+  keyPattern: { username: 1 },
+  keyValue: { username: 'pancho91' },
+  [Symbol(errorLabels)]: Set(0) {}
+}
+[2023-01-08T16:39:03.290] [ERROR] default - Error: Invalid login: 535 Authentication failed
+    at SMTPConnection._formatError (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\nodemailer\lib\smtp-connection\index.js:790:19)
+    at SMTPConnection._actionAUTHComplete (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\nodemailer\lib\smtp-connection\index.js:1542:34)
+    at SMTPConnection.<anonymous> (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\nodemailer\lib\smtp-connection\index.js:546:26)
+    at SMTPConnection._processResponse (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\nodemailer\lib\smtp-connection\index.js:953:20)
+    at SMTPConnection._onData (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\nodemailer\lib\smtp-connection\index.js:755:14)
+    at SMTPConnection._onSocketData (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\nodemailer\lib\smtp-connection\index.js:193:44)
+    at TLSSocket.emit (node:events:527:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    at readableAddChunk (node:internal/streams/readable:297:9)
+    at Readable.push (node:internal/streams/readable:234:10) {
+  code: 'EAUTH',
+  response: '535 Authentication failed',
+  responseCode: 535,
+  command: 'AUTH PLAIN'
+}
+[2023-01-08T16:40:18.576] [ERROR] default - Error: Invalid login: 535 Authentication failed
+    at SMTPConnection._formatError (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\nodemailer\lib\smtp-connection\index.js:790:19)
+    at SMTPConnection._actionAUTHComplete (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\nodemailer\lib\smtp-connection\index.js:1542:34)
+    at SMTPConnection.<anonymous> (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\nodemailer\lib\smtp-connection\index.js:546:26)
+    at SMTPConnection._processResponse (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\nodemailer\lib\smtp-connection\index.js:953:20)
+    at SMTPConnection._onData (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\nodemailer\lib\smtp-connection\index.js:755:14)
+    at SMTPConnection._onSocketData (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\nodemailer\lib\smtp-connection\index.js:193:44)
+    at TLSSocket.emit (node:events:527:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    at readableAddChunk (node:internal/streams/readable:297:9)
+    at Readable.push (node:internal/streams/readable:234:10) {
+  code: 'EAUTH',
+  response: '535 Authentication failed',
+  responseCode: 535,
+  command: 'AUTH PLAIN'
+}
+[2023-01-08T17:23:22.683] [ERROR] default - Error: Invalid login: 535 Authentication failed
+    at SMTPConnection._formatError (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\nodemailer\lib\smtp-connection\index.js:790:19)
+    at SMTPConnection._actionAUTHComplete (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\nodemailer\lib\smtp-connection\index.js:1542:34)
+    at SMTPConnection.<anonymous> (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\nodemailer\lib\smtp-connection\index.js:546:26)
+    at SMTPConnection._processResponse (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\nodemailer\lib\smtp-connection\index.js:953:20)
+    at SMTPConnection._onData (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\nodemailer\lib\smtp-connection\index.js:755:14)
+    at SMTPConnection._onSocketData (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\nodemailer\lib\smtp-connection\index.js:193:44)
+    at TLSSocket.emit (node:events:527:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    at readableAddChunk (node:internal/streams/readable:297:9)
+    at Readable.push (node:internal/streams/readable:234:10) {
+  code: 'EAUTH',
+  response: '535 Authentication failed',
+  responseCode: 535,
+  command: 'AUTH PLAIN'
+}
+[2023-01-08T17:24:36.225] [ERROR] default - Error: Invalid login: 535 Authentication failed
+    at SMTPConnection._formatError (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\nodemailer\lib\smtp-connection\index.js:790:19)
+    at SMTPConnection._actionAUTHComplete (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\nodemailer\lib\smtp-connection\index.js:1542:34)
+    at SMTPConnection.<anonymous> (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\nodemailer\lib\smtp-connection\index.js:546:26)
+    at SMTPConnection._processResponse (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\nodemailer\lib\smtp-connection\index.js:953:20)
+    at SMTPConnection._onData (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\nodemailer\lib\smtp-connection\index.js:755:14)
+    at SMTPConnection._onSocketData (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\nodemailer\lib\smtp-connection\index.js:193:44)
+    at TLSSocket.emit (node:events:527:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    at readableAddChunk (node:internal/streams/readable:297:9)
+    at Readable.push (node:internal/streams/readable:234:10) {
+  code: 'EAUTH',
+  response: '535 Authentication failed',
+  responseCode: 535,
+  command: 'AUTH PLAIN'
+}
+[2023-01-08T18:32:20.139] [ERROR] default - MongoServerError: E11000 duplicate key error collection: test.usuarios index: username_1 dup key: { username: "pancho8" }
+    at C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\mongoose\node_modules\mongodb\lib\operations\insert.js:53:33
+    at C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\mongoose\node_modules\mongodb\lib\cmap\connection_pool.js:273:25
+    at handleOperationResult (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\mongoose\node_modules\mongodb\lib\sdam\server.js:327:20)
+    at Connection.onMessage (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\mongoose\node_modules\mongodb\lib\cmap\connection.js:215:9)
+    at MessageStream.<anonymous> (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\mongoose\node_modules\mongodb\lib\cmap\connection.js:63:60)
+    at MessageStream.emit (node:events:527:28)
+    at processIncomingData (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\mongoose\node_modules\mongodb\lib\cmap\message_stream.js:108:16)
+    at MessageStream._write (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\mongoose\node_modules\mongodb\lib\cmap\message_stream.js:28:9)
+    at writeOrBuffer (node:internal/streams/writable:390:12)
+    at _write (node:internal/streams/writable:331:10) {
+  index: 0,
+  code: 11000,
+  keyPattern: { username: 1 },
+  keyValue: { username: 'pancho8' },
+  [Symbol(errorLabels)]: Set(0) {}
+}
+[2023-01-08T20:46:32.903] [ERROR] default - MongoServerError: E11000 duplicate key error collection: test.usuarios index: username_1 dup key: { username: "pancho" }
+    at C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\mongoose\node_modules\mongodb\lib\operations\insert.js:53:33
+    at C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\mongoose\node_modules\mongodb\lib\cmap\connection_pool.js:273:25
+    at handleOperationResult (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\mongoose\node_modules\mongodb\lib\sdam\server.js:327:20)
+    at Connection.onMessage (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\mongoose\node_modules\mongodb\lib\cmap\connection.js:215:9)
+    at MessageStream.<anonymous> (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\mongoose\node_modules\mongodb\lib\cmap\connection.js:63:60)
+    at MessageStream.emit (node:events:527:28)
+    at processIncomingData (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\mongoose\node_modules\mongodb\lib\cmap\message_stream.js:108:16)
+    at MessageStream._write (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\mongoose\node_modules\mongodb\lib\cmap\message_stream.js:28:9)
+    at writeOrBuffer (node:internal/streams/writable:390:12)
+    at _write (node:internal/streams/writable:331:10) {
+  index: 0,
+  code: 11000,
+  keyPattern: { username: 1 },
+  keyValue: { username: 'pancho' },
+  [Symbol(errorLabels)]: Set(0) {}
+}
+[2023-01-08T20:59:07.773] [ERROR] default - MongoServerError: E11000 duplicate key error collection: test.usuarios index: username_1 dup key: { username: "manu" }
+    at C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\mongoose\node_modules\mongodb\lib\operations\insert.js:53:33
+    at C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\mongoose\node_modules\mongodb\lib\cmap\connection_pool.js:273:25
+    at handleOperationResult (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\mongoose\node_modules\mongodb\lib\sdam\server.js:327:20)
+    at Connection.onMessage (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\mongoose\node_modules\mongodb\lib\cmap\connection.js:215:9)
+    at MessageStream.<anonymous> (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\mongoose\node_modules\mongodb\lib\cmap\connection.js:63:60)
+    at MessageStream.emit (node:events:527:28)
+    at processIncomingData (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\mongoose\node_modules\mongodb\lib\cmap\message_stream.js:108:16)
+    at MessageStream._write (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\mongoose\node_modules\mongodb\lib\cmap\message_stream.js:28:9)
+    at writeOrBuffer (node:internal/streams/writable:390:12)
+    at _write (node:internal/streams/writable:331:10) {
+  index: 0,
+  code: 11000,
+  keyPattern: { username: 1 },
+  keyValue: { username: 'manu' },
+  [Symbol(errorLabels)]: Set(0) {}
+}

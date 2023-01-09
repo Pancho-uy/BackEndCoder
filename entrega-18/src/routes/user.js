@@ -1,8 +1,9 @@
 import express from "express";
 const router = express.Router();
 import {UsuarioDao} from '../dao/UsuarioDao.js';
-import { sendGmail } from "../notifications/gmail/EmailSender.js";
-/* import { htmlNewUserTemplate } from "../notifications/gmail/htmltemplates/NewUserCreatedTemplate.js"; */
+import { sendemail } from "../notifications/gmail/EmailSender.js";
+import {WS_sender} from '../notifications/whatsapp/WS_sender.js';
+import { htmlNewUserTemplate } from "../notifications/gmail/htmltemplates/NewUserCreatedTemplate.js";
 
 const userDao = new UsuarioDao();
 
@@ -28,10 +29,10 @@ router.post('/signup', async(req,res) => {
     
     if (newUser) {
         const now = new Date();
-        const newUserTemplateEmail = htmlNewUserTemplate(newUser._id, now.toLocaleString());
-        // Descomentar si has llenado el .env con tu email y password.
-        //await sendGmail('Nuevo usuario creado', newUserTemplateEmail);
-        res.status(200).json({"success": "User added with ID " + newUser._id})
+        const newUserTemplateEmail = htmlNewUserTemplate(newUser._id, now.toLocaleString(), newUser.username);
+        await sendemail('Nuevo usuario creado', newUserTemplateEmail);
+        await WS_sender('Nuevo usuario creado', newUser._id, now.toLocaleString(), newUser.username, newUser.movil, newUser.email);
+        res.status(200).json({"exito": "Usuario "+newUser.username+" agregado con el ID " + newUser._id})
     } else {
         res.status(400).json({"error": "there was an error, please verify the body content match the schema"})
     }
