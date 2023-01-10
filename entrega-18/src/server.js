@@ -47,7 +47,6 @@ app.use(
         resave: true,
         saveUninitialized: true,
         cookie: {maxAge: 600000} //10 min.
-        
 }))
 
 app.use(express.json());
@@ -109,4 +108,3 @@ const server = app.listen(PORT, () => {
     logger.info(`Servidor escuchando en http://localhost:${PORT}`)
     })
 server.on('error', (err) => logger.error(err));
-
