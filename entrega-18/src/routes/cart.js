@@ -53,7 +53,6 @@ router.get('/:id/productos', async(req,res)=>{
         : res.status(404).json({"error": "Carrito no encontrado"})
 })
 
-
 // DELETE /api/carrito/:id/productos/:id_prod
 router.delete('/:id/productos/:id_prod', async(req, res) => {
     const {id, id_prod } = req.params;

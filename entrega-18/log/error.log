@@ -421,3 +421,135 @@
   moreInfo: 'https://www.twilio.com/docs/errors/21604',
   details: undefined
 }
+[2023-01-10T12:28:03.437] [ERROR] default - CastError: Cast to ObjectId failed for value "1" (type string) at path "_id" for model "carritos"
+    at model.Query.exec (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\mongoose\lib\query.js:4715:21)
+    at Query.then (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\mongoose\lib\query.js:4814:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+  messageFormat: undefined,
+  stringValue: '"1"',
+  kind: 'ObjectId',
+  value: '1',
+  path: '_id',
+  reason: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+      at new BSONTypeError (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\bson\lib\error.js:41:28)
+      at new ObjectId (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\bson\lib\objectid.js:67:23)
+      at castObjectId (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\mongoose\lib\cast\objectid.js:24:12)
+      at ObjectId.cast (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\mongoose\lib\schema\objectid.js:247:12)
+      at SchemaType.applySetters (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\mongoose\lib\schematype.js:1189:12)
+      at SchemaType._castForQuery (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\mongoose\lib\schematype.js:1623:15)
+      at SchemaType.castForQuery (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\mongoose\lib\schematype.js:1613:15)
+      at SchemaType.castForQueryWrapper (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\mongoose\lib\schematype.js:1590:20)
+      at cast (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\mongoose\lib\cast.js:344:32)
+      at Query.cast (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\mongoose\lib\query.js:5137:12),
+  valueType: 'string'
+}
+[2023-01-10T12:28:20.205] [ERROR] default - CastError: Cast to ObjectId failed for value "1" (type string) at path "_id" for model "carritos"
+    at model.Query.exec (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\mongoose\lib\query.js:4715:21)
+    at Query.then (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\mongoose\lib\query.js:4814:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+  messageFormat: undefined,
+  stringValue: '"1"',
+  kind: 'ObjectId',
+  value: '1',
+  path: '_id',
+  reason: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+      at new BSONTypeError (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\bson\lib\error.js:41:28)
+      at new ObjectId (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\bson\lib\objectid.js:67:23)
+      at castObjectId (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\mongoose\lib\cast\objectid.js:24:12)
+      at ObjectId.cast (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\mongoose\lib\schema\objectid.js:247:12)
+      at SchemaType.applySetters (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\mongoose\lib\schematype.js:1189:12)
+      at SchemaType._castForQuery (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\mongoose\lib\schematype.js:1623:15)
+      at SchemaType.castForQuery (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\mongoose\lib\schematype.js:1613:15)
+      at SchemaType.castForQueryWrapper (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\mongoose\lib\schematype.js:1590:20)
+      at cast (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\mongoose\lib\cast.js:344:32)
+      at Query.cast (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\mongoose\lib\query.js:5137:12),
+  valueType: 'string'
+}
+[2023-01-10T12:28:30.574] [ERROR] default - CastError: Cast to ObjectId failed for value "id=1" (type string) at path "_id" for model "carritos"
+    at model.Query.exec (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\mongoose\lib\query.js:4715:21)
+    at Query.then (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\mongoose\lib\query.js:4814:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+  messageFormat: undefined,
+  stringValue: '"id=1"',
+  kind: 'ObjectId',
+  value: 'id=1',
+  path: '_id',
+  reason: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+      at new BSONTypeError (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\bson\lib\error.js:41:28)
+      at new ObjectId (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\bson\lib\objectid.js:67:23)
+      at castObjectId (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\mongoose\lib\cast\objectid.js:24:12)
+      at ObjectId.cast (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\mongoose\lib\schema\objectid.js:247:12)
+      at SchemaType.applySetters (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\mongoose\lib\schematype.js:1189:12)
+      at SchemaType._castForQuery (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\mongoose\lib\schematype.js:1623:15)
+      at SchemaType.castForQuery (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\mongoose\lib\schematype.js:1613:15)
+      at SchemaType.castForQueryWrapper (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\mongoose\lib\schematype.js:1590:20)
+      at cast (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\mongoose\lib\cast.js:344:32)
+      at Query.cast (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\mongoose\lib\query.js:5137:12),
+  valueType: 'string'
+}
+[2023-01-10T12:29:30.071] [ERROR] default - CastError: Cast to ObjectId failed for value "id=1" (type string) at path "_id" for model "carritos"
+    at model.Query.exec (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\mongoose\lib\query.js:4715:21)
+    at Query.then (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\mongoose\lib\query.js:4814:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+  messageFormat: undefined,
+  stringValue: '"id=1"',
+  kind: 'ObjectId',
+  value: 'id=1',
+  path: '_id',
+  reason: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+      at new BSONTypeError (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\bson\lib\error.js:41:28)
+      at new ObjectId (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\bson\lib\objectid.js:67:23)
+      at castObjectId (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\mongoose\lib\cast\objectid.js:24:12)
+      at ObjectId.cast (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\mongoose\lib\schema\objectid.js:247:12)
+      at SchemaType.applySetters (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\mongoose\lib\schematype.js:1189:12)
+      at SchemaType._castForQuery (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\mongoose\lib\schematype.js:1623:15)
+      at SchemaType.castForQuery (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\mongoose\lib\schematype.js:1613:15)
+      at SchemaType.castForQueryWrapper (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\mongoose\lib\schematype.js:1590:20)
+      at cast (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\mongoose\lib\cast.js:344:32)
+      at Query.cast (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\mongoose\lib\query.js:5137:12),
+  valueType: 'string'
+}
+[2023-01-10T12:29:39.156] [ERROR] default - CastError: Cast to ObjectId failed for value "1" (type string) at path "_id" for model "carritos"
+    at model.Query.exec (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\mongoose\lib\query.js:4715:21)
+    at Query.then (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\mongoose\lib\query.js:4814:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+  messageFormat: undefined,
+  stringValue: '"1"',
+  kind: 'ObjectId',
+  value: '1',
+  path: '_id',
+  reason: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+      at new BSONTypeError (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\bson\lib\error.js:41:28)
+      at new ObjectId (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\bson\lib\objectid.js:67:23)
+      at castObjectId (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\mongoose\lib\cast\objectid.js:24:12)
+      at ObjectId.cast (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\mongoose\lib\schema\objectid.js:247:12)
+      at SchemaType.applySetters (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\mongoose\lib\schematype.js:1189:12)
+      at SchemaType._castForQuery (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\mongoose\lib\schematype.js:1623:15)
+      at SchemaType.castForQuery (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\mongoose\lib\schematype.js:1613:15)
+      at SchemaType.castForQueryWrapper (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\mongoose\lib\schematype.js:1590:20)
+      at cast (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\mongoose\lib\cast.js:344:32)
+      at Query.cast (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\mongoose\lib\query.js:5137:12),
+  valueType: 'string'
+}
+[2023-01-10T12:29:46.174] [ERROR] default - CastError: Cast to ObjectId failed for value "1" (type string) at path "_id" for model "carritos"
+    at model.Query.exec (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\mongoose\lib\query.js:4715:21)
+    at Query.then (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\mongoose\lib\query.js:4814:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+  messageFormat: undefined,
+  stringValue: '"1"',
+  kind: 'ObjectId',
+  value: '1',
+  path: '_id',
+  reason: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+      at new BSONTypeError (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\bson\lib\error.js:41:28)
+      at new ObjectId (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\bson\lib\objectid.js:67:23)
+      at castObjectId (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\mongoose\lib\cast\objectid.js:24:12)
+      at ObjectId.cast (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\mongoose\lib\schema\objectid.js:247:12)
+      at SchemaType.applySetters (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\mongoose\lib\schematype.js:1189:12)
+      at SchemaType._castForQuery (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\mongoose\lib\schematype.js:1623:15)
+      at SchemaType.castForQuery (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\mongoose\lib\schematype.js:1613:15)
+      at SchemaType.castForQueryWrapper (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\mongoose\lib\schematype.js:1590:20)
+      at cast (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\mongoose\lib\cast.js:344:32)
+      at Query.cast (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-18\node_modules\mongoose\lib\query.js:5137:12),
+  valueType: 'string'
+}

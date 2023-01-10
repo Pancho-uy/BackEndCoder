@@ -62,11 +62,16 @@ let storage = multer.diskStorage({
     },
     filename: function (req, file, cb) {
         /* console.log(file) */
-        cb(null, file.originalname + '-' + Date.now())    
+        cb(null, file.originalname + '-' + Date.now())
     }
 })
 
-let upload = multer({ storage: storage })
+
+app.get('/', async(req, res) => {
+    res.render('pages/login', {status: req.session.login})
+})
+
+/* let upload = multer({ storage: storage })
 
 app.post('/uploadfile', upload.single('myfile'), (req, res, next) => {
     const file = req.file
@@ -76,8 +81,7 @@ app.post('/uploadfile', upload.single('myfile'), (req, res, next) => {
         return next(error)
     }
     res.send(file)
-})
-
+}) */
 
 app.all("*", (req, res) => {
     res.status(404).json({"error": "ruta no existente"})
