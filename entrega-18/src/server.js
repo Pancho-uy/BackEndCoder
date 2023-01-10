@@ -14,8 +14,6 @@ import logger from "./loggers/Log4jsLogger.js";
 import loggerMiddleware from "./middlewares/routesLogger.middleware.js";
 import multer from 'multer';
 
-
-
 const app = express();
 
 const __filename = fileURLToPath(import.meta.url);
