@@ -9,11 +9,16 @@ log4js.configure({
         terminal: {type: 'console'},
         warnFile: {type: 'file', filename: __dirname + '../../../log/warn.log'},
         errorFile: {type: 'file', filename: __dirname + '../../../log/error.log'},
-        loggerInfo: {type: 'logLevelFilter', appender: 'terminal', level: 'info'},
+
+        // [INFO] al final lo dejo solo por terminal...
+        /* infoFile: {type: 'file', filename: __dirname + '../../../log/info.log'}, */
+        /* loggerInfo: {type: 'logLevelFilter', appender: 'infoFile', level: 'info', maxLevel:'info'}, */
+        
         loggerWarn: {type: 'logLevelFilter', appender: 'warnFile', level: 'warn', maxLevel:'warn'},
         loggerError: {type: 'logLevelFilter', appender: 'errorFile', level: 'error', maxLevel: 'error'}
     },
     categories: {
+        /* default: {appenders: ['loggerInfo', 'loggerWarn', 'loggerError'], level: 'info'} */
         default: {appenders: ['terminal', 'loggerWarn', 'loggerError'], level: 'info'}
     }
 })

@@ -61,7 +61,7 @@ let storage = multer.diskStorage({
         cb(null, 'uploads')
     },
     filename: function (req, file, cb) {
-        // console.log(file)
+        /* console.log(file) */
         cb(null, file.originalname + '-' + Date.now())    
     }
 })
@@ -96,7 +96,7 @@ const options = {
 
 app._router.stack.forEach(function (r) {
     if (r.route && r.route.path) {
-      console.log(r.route.path)
+        logger.info(r.route.path)
     }
   });
 

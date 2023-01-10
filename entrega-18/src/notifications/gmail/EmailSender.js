@@ -22,18 +22,6 @@ const mailOptions = (emailSubject, htmlTemplate) => {
     }
 }
 
-/* const htmlNewUserTemplate = (id, date, usuario, movil) => {
-    return `
-    <h2>¡Nuevo usuario creado con Exito!</h2>
-    <p>Se ha creado un nuevo usuario</p>
-    <ul>
-        <li><strong>User Name:</strong> ${usuario}</li>
-        <li><strong>UUID:</strong> ${id}</li>
-        <li><strong>FECHA:</strong> ${date}</li>
-    </ul>
-    `
-}; */
-
 export async function sendemail(subject, htmlTemplate) {
     try {
         const mailOpt = mailOptions(

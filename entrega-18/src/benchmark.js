@@ -21,5 +21,5 @@ function run(url) {
     })
 }
 
-console.log('Running tests')
+console.log('Testeando...')
 run('http://localhost:3030/test/info');

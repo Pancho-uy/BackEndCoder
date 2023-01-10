@@ -6,12 +6,14 @@ import logger from "../loggers/Log4jsLogger.js";
 const router = express.Router();
 const carritoDao = new CarritoDao();
 
+// Endpoints
+
 // POST /api/carrito
 router.post('/', async (_req, res) => {
     const newCart = await carritoDao.createCart();
     newCart
-        ? res.status(200).json({"success": "Product added with ID " + newCart._id})
-        : res.status(500).json({"error": "there was an error"})
+        ? res.status(200).json({"success": "Producto agregado con la ID " + newCart._id})
+        : res.status(500).json({"error": "Hubo un error al agregar el producto"})
 
 })
 
@@ -21,8 +23,8 @@ router.delete('/:id', async(req,res) => {
     const wasDeleted = await carritoDao.deleteCartById(id);
     
     wasDeleted 
-        ? res.status(200).json({"success": "cart successfully removed"})
-        : res.status(404).json({"error": "cart not found"})
+        ? res.status(200).json({"success": "Carrito removido con exito"})
+        : res.status(404).json({"error": "Carrito no encontrado"})
      
 })
 
@@ -36,7 +38,7 @@ router.post('/:id/productos', async(req,res) => {
     if(productExists) {
         await carritoDao.saveProductToCart(id, body)
     } else {
-        res.status(404).json({"error": "product not found"});
+        res.status(404).json({"error": "Producto no encontrado"});
     }
     
 })
@@ -48,7 +50,7 @@ router.get('/:id/productos', async(req,res)=>{
     
     cartProducts
         ? res.status(200).json(cartProducts)
-        : res.status(404).json({"error": "cart not found"})
+        : res.status(404).json({"error": "Carrito no encontrado"})
 })
 
 
@@ -59,8 +61,8 @@ router.delete('/:id/productos/:id_prod', async(req, res) => {
     const wasDeleted = await carritoDao.deleteProductFromCart(id, id_prod);
     
     wasDeleted 
-        ? res.status(200).json({"success": "that product is no longer in the cart"})
-        : res.status(400).json({"error": "there was some problem"})
+        ? res.status(200).json({"success": "el producto fue removido del carrito"})
+        : res.status(400).json({"error": "hubo un problema al remover el producto del carrito"})
     
 })
 
