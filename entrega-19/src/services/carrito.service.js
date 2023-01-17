@@ -1,9 +1,9 @@
-import "../config/db.js";
-import { CarritosModel } from '../modules/carritos.modules.js';
-import logger from "../loggers/Log4jsLogger.js";
-export class CarritoDao {
+import "../configs/db.config.js";
+import { CarritosModel } from '../models/carritos.model.js';
+import logger from "../utils/loggers/Log4jsLogger.js";
+export class CarritoService {
 
-    ID_FIELD = "_id";
+    ID_FIELD = "id";
     
     async createCart() {
         try {
@@ -22,7 +22,7 @@ export class CarritoDao {
             return false;
         }
     }
-    // 6254bf5bdb4015399b45c35f
+    
     async saveProductToCart(id, obj) {
         try {
             const cart = await CarritosModel.findById(id)
@@ -47,13 +47,12 @@ export class CarritoDao {
         }
     }
     
-     async getAllProductsFromCart(id) {
+    async getAllProductsFromCart(id) {
         try {
-            return await CarritosModel.findById(id).populate('productos').select({productos: 1, _id:0});
+            return await CarritosModel.findById(id).populate('products').select({products: 1, _id:0});
         } catch (error) {
             logger.error(error);
             return false;
         }
-    }  
-
+    }
 }

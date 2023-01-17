@@ -41,11 +41,12 @@ router.post('/:id/productos', async(req,res) => {
         res.status(404).json({"error": "Producto no encontrado"});
     }
     
-})
+}) 
 
 // GET /api/carrito/:id/productos
-router.get('/:id/productos', async(req,res)=>{
+router.get('/productos/:id', async(req,res)=>{
     const { id } = req.params;
+    
     const cartProducts = await carritoDao.getAllProductsFromCart(id);
     
     cartProducts
