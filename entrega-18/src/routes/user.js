@@ -49,7 +49,7 @@ router.post('/login', async(req, res) => {
     
     if (loggedUser) {
         req.session.login=true;
-        res.redirect('/api/usuario')
+        res.redirect('/api/usuario/:user')
     } else {
         req.session.login=false;
         res.redirect('/api/usuario/login')

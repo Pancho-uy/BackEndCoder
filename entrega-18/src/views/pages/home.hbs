@@ -2,6 +2,8 @@
 
     {{#if status}}
         <h4>Usuario Logueado con EXITO!</h4>
+        // muestro el carrito ruta /api/carrito/:id/productos
+        <a href="/api/carrito/{{id}}/productos">Ver Carrito</a>
     {{else}}
        <br>
        <h4>No estamos logeados.... :(</h4>
