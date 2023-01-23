@@ -54,6 +54,10 @@ app.use('/api/carrito', cartRouter);
 app.use('/api/usuario', userRouter);
 app.use('/test', otherRouter);
 
+app.get('/', async(req, res) => {
+    res.render('pages/home', {status: req.session.login})
+})
+
 
 app.all("*", (req, res) => {
     res.status(404).json({"error": "ruta no existente"})

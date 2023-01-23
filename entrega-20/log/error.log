@@ -74,3 +74,31 @@
   moreInfo: 'https://www.twilio.com/docs/errors/21211',
   details: undefined
 }
+[2023-01-23T11:14:29.810] [ERROR] default - Whatsapp Error:  RestException [Error]: Authenticate
+    at success (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-20\node_modules\twilio\lib\base\Version.js:135:15)
+    at Promise_then_fulfilled (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-20\node_modules\q\q.js:766:44)
+    at Promise_done_fulfilled (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-20\node_modules\q\q.js:835:31)
+    at Fulfilled.Fulfilled_dispatch [as dispatch] (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-20\node_modules\q\q.js:1229:9)
+    at Pending_become_eachMessage_task (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-20\node_modules\q\q.js:1369:30)
+    at RawTask.call (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-20\node_modules\asap\asap.js:40:19)
+    at flush (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-20\node_modules\asap\raw.js:50:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11) {
+  status: 401,
+  code: 20003,
+  moreInfo: 'https://www.twilio.com/docs/errors/20003',
+  details: undefined
+}
+[2023-01-23T11:14:30.430] [ERROR] default - Whatsapp Error:  RestException [Error]: Authenticate
+    at success (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-20\node_modules\twilio\lib\base\Version.js:135:15)
+    at Promise_then_fulfilled (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-20\node_modules\q\q.js:766:44)
+    at Promise_done_fulfilled (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-20\node_modules\q\q.js:835:31)
+    at Fulfilled.Fulfilled_dispatch [as dispatch] (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-20\node_modules\q\q.js:1229:9)
+    at Pending_become_eachMessage_task (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-20\node_modules\q\q.js:1369:30)
+    at RawTask.call (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-20\node_modules\asap\asap.js:40:19)
+    at flush (C:\Users\Pancho\Downloads\Full Stack Dev\BackendCoder\BackEndCoder\entrega-20\node_modules\asap\raw.js:50:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11) {
+  status: 401,
+  code: 20003,
+  moreInfo: 'https://www.twilio.com/docs/errors/20003',
+  details: undefined
+}
