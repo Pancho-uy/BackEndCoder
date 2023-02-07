@@ -1,0 +1,20 @@
+query{
+  	getAllProducts{
+      id
+      title
+      price
+	}
+}
+
+mutation{
+	createProduct(data:{
+		title:"UISP airFiber 5 GHz Mid-Band Bridge",
+		price: 1300,
+		description: "Compact, wireless point-to-point mid-band bridge with a 1.2+ Gbps throughput rate.",
+    thumbnail:"https://cdn.shopify.com/s/files/1/1439/1668/products/airfiber_af5_front_right_angle_new_logo_web_grande.png?v=1475833027",
+    stock:10}){
+    id,
+    title
+  }
+}
+
