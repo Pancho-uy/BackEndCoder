@@ -4,7 +4,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "server": "nodemon --inspect ./src/server.js -p 3031"
+    "server": "nodemon --inspect ./src/server.js -p 8080"
   },
   "keywords": [],
   "license": "ISC",
