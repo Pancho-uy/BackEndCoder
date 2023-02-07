@@ -3,8 +3,7 @@ export const ProductoNewInput = `
         title: String!
         price: Int!
         description: String!
-        code: String!
-        image: String
+        thumbnail: String!
         stock: Int!
     }
 `

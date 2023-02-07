@@ -19,13 +19,7 @@ const Schema = new mongoose.Schema({
         required: true,
         max: 500
     },
-    code: {
-        type: String,
-        required: true,
-        max: 6,
-        unique: true
-    },
-    image: {
+    thumbnail: {
         type: String,
         max: 200
     },

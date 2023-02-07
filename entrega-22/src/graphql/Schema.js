@@ -2,7 +2,7 @@ import {buildSchema} from "graphql";
 import {ProductoType} from "./types/Producto.type.js";
 import {CarritoType} from "./types/Carrito.type.js";
 import {GetAllCarritosQuery} from "./queries/GetAllCarritos.query.js";
-import {GetAllProductosQuery} from "./queries/GetAllProductos.query.js";
+import {getAllProductsQuery} from "./queries/getAllProducts.query.js";
 import {CreateCarritoMutation} from "./mutations/CreateCarrito.mutation.js";
 import {DeleteCarritoByIdMutation} from "./mutations/DeleteCarritoById.mutation.js";
 import {GetAllProductsFromCartByIdQuery} from "./queries/GetAllProductsFromCartById.query.js";
@@ -24,7 +24,7 @@ export const schema = buildSchema(`
   type Query {
     ${GetAllCarritosQuery}
     ${GetProductByIdQuery}
-    ${GetAllProductosQuery}
+    ${getAllProductsQuery}
     ${GetAllProductsFromCartByIdQuery}  
   }
   

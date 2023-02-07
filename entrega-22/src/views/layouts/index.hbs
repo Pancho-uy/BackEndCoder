@@ -5,18 +5,20 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Entrega 22</title>
+        <title>Entrega 22 - GraphiQl</title>
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="/styles.css" rel="stylesheet" />
-        
+         <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"/>
     </head>
     <body>
         <div class="d-flex" id="wrapper">
             <!-- Sidebar-->
             <div class="border-end bg-white" id="sidebar-wrapper">
-                <div class="sidebar-heading border-bottom bg-light" title="Entrega 22">API Productos</div>
+                <div class="sidebar-heading border-bottom bg-light" title="MENU">MENU</div>
                 <div class="list-group list-group-flush">
                     {{>navlinks}}
                 </div>
@@ -36,7 +38,7 @@
                                     🔴 Desconectado
                                 {{/if}}
                                 </li>
-                                <li class="nav-item active"><a class="nav-link" href="/api/usuario">Home</a></li>   
+                                <li class="nav-item active"><a class="nav-link" href="/api/usuario">Inicio</a></li>   
                             </ul>
                         </div>
                     </div>
@@ -51,5 +53,12 @@
         <script defer src="bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
         <script src="/scripts.js"></script>
+        <script>
+            const phoneInputField = document.querySelector("#movil");
+            const phoneInput = window.intlTelInput(phoneInputField, {
+                utilsScript:
+                "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+            });
+        </script>
     </body>
 </html>

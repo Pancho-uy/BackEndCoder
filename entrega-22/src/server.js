@@ -22,7 +22,8 @@ const __dirname = path.dirname(__filename);
 app.use(loggerMiddleware);
 app.use(express.static('public'));
 app.use(compression());
-app.set('views', './src/views');
+
+/* app.set('views', './src/views');
 app.set('view engine', 'hbs');
 
 app.engine('hbs', engine({
@@ -31,7 +32,7 @@ app.engine('hbs', engine({
     layoutsDir: __dirname + '/views/layouts',
     partialsDir: __dirname + '/views/partials'
 }))
-
+ */
 app.use(
     session({
         store: mongoStore.create({
@@ -56,7 +57,7 @@ async function getAllCarritos() {
     return CarritoService.getInstance().getAll();
 }
 
-async function getAllProductos() {
+async function getAllProducts() {
     return ProductoService.getInstance().getAll();
 }
 
@@ -102,7 +103,7 @@ app.use(
             schema,
             rootValue: {
                 getAllCarritos,
-                getAllProductos,
+                getAllProducts,
                 createCarrito,
                 deleteCarritoById,
                 getAllProductsFromCartById,
@@ -117,6 +118,16 @@ app.use(
         }
     )
 );
+
+/* app.use('/api/productos', productRouter);
+app.use('/api/carrito', cartRouter);
+app.use('/api/usuario', userRouter);
+app.use('/test', otherRouter); */
+
+
+/* app.get('/', async(req, res) => {
+    res.render('pages/home', {status: req.session.login})
+}) */
 
 app.all("*", (req, res) => {
     res.status(404).json({"error": "ruta no existente"})
@@ -142,7 +153,7 @@ app._router.stack.forEach(function (r) {
 const { PORT } = minimist(process.argv.slice(2), options);
 
 const server = app.listen(PORT, () => {
-    logger.info(`🚀 Server started at http://localhost:${PORT}`)
+    logger.info(`Servidor escuchando en http://localhost:${PORT}`)
     })
     
 server.on('error', (err) => logger.error(err));
